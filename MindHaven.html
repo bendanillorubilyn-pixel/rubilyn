@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Haven - Your Safe Space</title>
+     <link rel="icon" type="image/x-icon" href="c:\Users\Administrator\Desktop\IMG_20260502_111507.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6C63FF',
+                        secondary: '#F0F4FF',
+                        dark: '#2D3748',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .nav-link {
+                @apply hover:text-primary transition duration-300 relative;
+            }
+            .nav-link::after {
+                content: '';
+                @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #19e4d3;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #6C63FF 0%, #A8A4FF 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-primary">
+                <i class="fa fa-heart-o mr-2"></i>Mind Haven
+            </h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-dark">Home</a>
+                <a href="#breathe" class="nav-link text-dark">Breathe</a>
+                 <a href="#affirmations" class="nav-link text-dark">Affirmations</a>
+                 <a href="#selfcare" class="nav-link text-dark">Self Care</a>
+                 <a href="#music" class="nav-link text-dark">Music</a>
+                <a href="#stories" class="nav-link text-dark">Stories</a>
+                <a href="#community" class="nav-link text-dark">Community</a>
+                <a href="#gallery" class="nav-link text-dark">Art & Gallery</a>
+                <a href="#resources" class="nav-link text-dark">Resources</a>
+        </div>
+    </nav>
+
+<section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden px-4 text-white">
+    
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+
+    <div class="container mx-auto text-center relative z-10">
+        <div class="mb-6">
+            <span class="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black tracking-[0.5em] uppercase animate-bounce-slow">
+                ✨ Peace Starts Here
+            </span>
+        </div>
+        <h2 class="text-6xl md:text-[140px] font-black leading-[0.85] tracking-tighter mb-8">
+            <span class="block opacity-90 text-4xl md:text-5xl font-light tracking-normal mb-4">Welcome to Your</span>
+            <span class="relative inline-block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-teal-300 bg-[length:200%_auto] animate-gradient-text">
+                    Safe Space
+                </span>
+                <div class="absolute -bottom-4 left-0 w-full h-2 bg-gradient-to-r from-transparent via-white/50 to-transparent blur-sm"></div>
+            </span>
+        </h2>
+
+ 
+        <p class="text-xl md:text-3xl max-w-4xl mx-auto mb-16 leading-relaxed font-medium text-blue-50/80 drop-shadow-md">
+         <br class="hidden md:block">
+            <span class="text-white font-bold">A place where you can express your feelings, read relatable stories, and know that you are not alone in this journey.</span>
+        </p>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+            <a href="#stories" 
+               class="group relative inline-flex items-center justify-center px-16 py-7 overflow-hidden font-black text-2xl transition-all duration-300 bg-white text-slate-900 rounded-2xl hover:rounded-[2rem] hover:scale-110 shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+                <span class="relative z-10 flex items-center gap-3">
+                    START YOUR JOURNEY 
+                    <i class="fa fa-arrow-right group-hover:translate-x-3 transition-transform duration-500"></i>
+                </span>
+                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-shine"></div>
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 text-center opacity-60">
+        <p class="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Scroll to Explore</p>
+        <div class="w-[2px] h-16 bg-gradient-to-b from-white to-transparent mx-auto"></div>
+    </div>
+</section>
+
+<style>
+    
+    @keyframes gradient-text {
+        0% { background-position: 0% center; }
+        50% { background-position: 100% center; }
+        100% { background-position: 0% center; }
+    }
+    .animate-gradient-text {
+        animation: gradient-text 5s ease infinite;
+    }
+
+    @keyframes shine {
+        100% { left: 125%; }
+    }
+    .animate-shine {
+        animation: shine 0.8s forwards;
+    }
+
+    .animate-bounce-slow {
+        animation: bounce 3s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    h2 {
+        filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+    }
+</style>
+
+            </a>
+        </div>
+    <section id="breathe" class="py-24 px-4 bg-gradient-to-b from-white to-blue-50/50 overflow-hidden">
+    <div class="container mx-auto text-center">
+        <div class="mb-12">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">
+                Take a Deep Breath <span class="inline-block animate-bounce">🌬️</span>
+            </h3>
+            <p class="text-lg text-slate-500 max-w-md mx-auto leading-relaxed">
+                Watch the circle and follow the rhythm to calm down.
+            </p>
+        </div>
+
+        <div class="relative flex items-center justify-center">
+            <!-- Ripple Effect -->
+            <div class="absolute w-64 h-64 bg-blue-400/20 rounded-full animate-ping duration-[4000ms]"></div>
+            
+            <!-- Breathing Circle -->
+            <div id="breathCircle" 
+                 class="relative w-56 h-56 flex items-center justify-center rounded-full 
+                        bg-gradient-to-tr from-blue-600 to-cyan-400 
+                        shadow-[0_0_50px_rgba(37,99,235,0.3)]
+                        transition-all duration-[4000ms] ease-in-out">
+                
+                <div class="w-[90%] h-[90%] rounded-full bg-white/10 backdrop-blur-md border border-white/30 
+                            flex flex-col items-center justify-center text-white">
+                    <span id="breathText" class="text-2xl font-bold tracking-widest uppercase transition-opacity duration-500">Inhale</span>
+                    <div class="mt-2 w-8 h-1 bg-white/40 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    
+    #breathCircle {
+        animation: breatheAnimation 8s infinite ease-in-out;
+    }
+
+    @keyframes breatheAnimation {
+        0%, 100% { transform: scale(0.85); } 
+        50% { transform: scale(1.2); }      
+    }
+</style>
+
+<script>
+    const breathText = document.getElementById('breathText');
+    
+    
+    function updateText() {
+        setTimeout(() => {
+            breathText.innerText = "Exhale";
+            
+            setTimeout(() => {
+                breathText.innerText = "Inhale";
+                updateText(); // 
+            }, 4000);
+            
+        }, 4000);
+    }
+
+    updateText();
+</script>
+
+  <!-- DAILY AFFIRMATIONS SECTION -->
+<section id="affirmations" class="py-24 px-4 relative overflow-hidden bg-[#fafafa]">
+    <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-purple-200/50 to-blue-200/50 blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-rose-100/50 to-orange-100/50 blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+
+    <div class="container mx-auto text-center relative z-10">
+        <div class="mb-12">
+            <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-purple-400 uppercase bg-purple-100 rounded-full">Self Care</span>
+            <h3 class="text-4xl md:text-6xl font-black text-slate-800 mb-4 tracking-tight">
+                Daily Affirmations <span class="inline-block animate-bounce">✨</span>
+            </h3>
+            <p class="text-slate-500 text-lg font-medium">Click the button for your daily boost of positivity.</p>
+        </div>
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-white/80 backdrop-blur-2xl p-10 md:p-16 rounded-[2.5rem] border border-white/50 shadow-xl">
+                    <i class="fa fa-quote-left text-purple-200 text-5xl absolute top-8 left-8"></i>
+                    
+                    <p id="affirmationText" class="text-3xl md:text-4xl text-slate-700 font-serif italic leading-snug min-h-[120px] flex items-center justify-center">
+                        "I am worthy of all the good things coming my way."
+                    </p>
+                    
+                    <div class="mt-10 flex items-center justify-center gap-2">
+                        <div class="h-[1px] w-8 bg-purple-200"></div>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Mindful Moment</span>
+                        <div class="h-[1px] w-8 bg-purple-200"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="newAffirmation()" 
+                class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:shadow-[0_20px_40px_rgba(124,58,237,0.3)] hover:-translate-y-1 transition-all active:scale-95 shadow-lg">
+            <i class="fa fa-refresh text-sm"></i>
+            <span>Refresh My Mind</span>
+        </button>
+    </div>
+</section>
+
+<style>
+    #affirmationText {
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    .text-switching {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+</style>
+
+<script>
+    function newAffirmation() {
+        const textElement = document.getElementById('affirmationText');
+        const affirmations = [
+            "I am capable of achieving great things.",
+            "I choose to be happy and grateful today.",
+            "My potential is limitless.",
+            "I am surrounded by love and support.",
+            "I trust the process of life."
+        ];
+
+        textElement.classList.add('text-switching');
+
+        setTimeout(() => {
+          
+            const random = Math.floor(Math.random() * affirmations.length);
+            textElement.innerText = `"${affirmations[random]}"`;
+            
+          
+            textElement.classList.remove('text-switching');
+        }, 400);
+    }
+</script>
+
+    <!-- ================================= -->
+    <!-- SELF CARE CHECKLIST - STYLISH PINK EDITION -->
+<section id="selfcare" class="py-24 px-4 bg-[#fff5f7] relative overflow-hidden">
+    <div class="absolute top-[-10%] right-[-10%] w-80 h-80 bg-pink-200/50 rounded-full blur-[100px] animate-pulse"></div>
+    <div class="absolute bottom-[-10%] left-[-10%] w-80 h-80 bg-rose-100/50 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+
+    <div class="container mx-auto max-w-2xl relative z-10">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-1 mb-4 text-[10px] font-black tracking-[0.3em] uppercase bg-pink-100 text-pink-600 rounded-full">
+                Love Yourself
+            </span>
+            <h3 class="text-4xl md:text-5xl font-black text-slate-800 mb-4 tracking-tight">
+                Daily <span class="text-pink-500">Self-Care</span> ✅
+            </h3>
+            <p class="text-slate-500 font-medium text-lg">Celebrate your small wins today.</p>
+        </div>
+        <div class="space-y-4 bg-white/60 backdrop-blur-2xl p-8 md:p-12 rounded-[3rem] border border-white shadow-[0_20px_60px_rgba(255,182,193,0.2)]">
+            
+            <!-- Item 1 - Water -->
+            <label class="group flex items-center justify-between p-5 bg-white/80 rounded-2xl border border-pink-50 cursor-pointer transition-all duration-300 hover:shadow-md hover:border-pink-200 hover:-translate-y-1">
+                <div class="flex items-center space-x-5">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl group-hover:rotate-12 transition-transform shadow-sm">💧</div>
+                    <div>
+                        <p class="text-lg font-bold text-slate-700">Hydration</p>
+                        <p class="text-xs text-slate-400 font-medium">Did you drink water?</p>
+                    </div>
+                </div>
+                <input type="checkbox" class="pink-checkbox w-8 h-8 rounded-full border-2 border-pink-100 text-pink-500 transition-all cursor-pointer">
+            </label>
+
+            <!-- Item 2 - Eat -->
+            <label class="group flex items-center justify-between p-5 bg-white/80 rounded-2xl border border-pink-50 cursor-pointer transition-all duration-300 hover:shadow-md hover:border-pink-200 hover:-translate-y-1">
+                <div class="flex items-center space-x-5">
+                    <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center text-3xl group-hover:rotate-12 transition-transform shadow-sm">🍎</div>
+                    <div>
+                        <p class="text-lg font-bold text-slate-700">Nourishment</p>
+                        <p class="text-xs text-slate-400 font-medium">Did you eat something?</p>
+                    </div>
+                </div>
+                <input type="checkbox" class="pink-checkbox w-8 h-8 rounded-full border-2 border-pink-100 text-pink-500 transition-all cursor-pointer">
+            </label>
+
+            <!-- Item 3 - Rest -->
+            <label class="group flex items-center justify-between p-5 bg-white/80 rounded-2xl border border-pink-50 cursor-pointer transition-all duration-300 hover:shadow-md hover:border-pink-200 hover:-translate-y-1">
+                <div class="flex items-center space-x-5">
+                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-3xl group-hover:rotate-12 transition-transform shadow-sm">👀</div>
+                    <div>
+                        <p class="text-lg font-bold text-slate-700">Eye Rest</p>
+                        <p class="text-xs text-slate-400 font-medium">Did you rest your eyes?</p>
+                    </div>
+                </div>
+                <input type="checkbox" class="pink-checkbox w-8 h-8 rounded-full border-2 border-pink-100 text-pink-500 transition-all cursor-pointer">
+            </label>
+
+            <!-- Special Message Card -->
+            <div class="mt-8 p-6 bg-gradient-to-br from-pink-500 to-rose-400 rounded-[2rem] text-center shadow-lg shadow-pink-200">
+                <p class="text-white font-bold tracking-wide italic">"You are doing great! ❤️"</p>
+                <p class="text-pink-100 text-[10px] uppercase tracking-widest mt-1">Keep shining</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .pink-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        display: grid;
+        place-content: center;
+        background-color: white;
+    }
+
+    .pink-checkbox::before {
+        content: "\f00c"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 14px;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        color: white;
+    }
+
+    .pink-checkbox:checked {
+        background-color: #ec4899; 
+        border-color: #ec4899;
+    }
+
+    .pink-checkbox:checked::before {
+        transform: scale(1);
+    }
+</style>
+
+
+    <!-- ================================= -->
+    <!--           MUSIC SECTION          -->
+    <!-- ================================= -->
+    <section id="music" class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-bold text-dark mb-2">Calming Music 🎧</h3>
+            <p class="text-gray-500 mb-8">Listen to relax your mind</p>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <a href="https://youtu.be/n61ULEU7CO0?si=IFJ9FbOrSEMgGuv3" target="_blank" class="block bg-white p-6 rounded-xl hover:bg-primary hover:text-white transition card-hover shadow-sm">
+                    <i class="fa fa-music text-3xl mb-2"></i>
+                    <h4 class="font-bold">Lofi Hip Hop Radio</h4>
+                    <p class="text-sm">Relaxing beats to study/chill</p>
+                </a>
+
+                <a href="https://youtu.be/eTeD8DAta4c?si=oGmtQdRJA7Fv-Zyd" target="_blank" class="block bg-white p-6 rounded-xl hover:bg-primary hover:text-white transition card-hover shadow-sm">
+                    <i class="fa fa-cloud text-3xl mb-2"></i>
+                    <h4 class="font-bold">Rain Sounds</h4>
+                    <p class="text-sm">Heavy rain for sleeping</p>
+                </a>
+
+                <a href="https://youtu.be/rCSCPujLs14?si=9Fnsqcbj0l3BAodl" target="_blank" class="block bg-white p-6 rounded-xl hover:bg-primary hover:text-white transition card-hover shadow-sm">
+                    <i class="fa fa-moon-o text-3xl mb-2"></i>
+                    <h4 class="font-bold">Deep Sleep Music</h4>
+                    <p class="text-sm">Delta waves for relaxation</p>
+                </a>
+            </div>
+        </div>
+    </section>>
+
+    <script>
+        const affirmations = [
+            "I am enough.",
+            "I am worthy of love.",
+            "My feelings are valid.",
+            "I will get through this.",
+            "I am stronger than my anxiety.",
+            "Better days are coming.",
+            "I am not alone.",
+            "My mental health matters.",
+            "I choose peace over worry.",
+            "I am doing my best, and that is enough."
+        ];
+
+        function newAffirmation() {
+            let randomIndex = Math.floor(Math.random() * affirmations.length);
+            document.getElementById("affirmationText").innerText = affirmations[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
+
+
+   <!-- STORIES SECTION (Cards) -->
+<section id="stories" class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-4xl font-bold text-slate-800 mb-2">Stories & Journals</h3>
+            <p class="text-gray-500">✨ Click a card to read the full experience in Zen Mode</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Depression Card -->
+            <div onclick="openJournal('depression')" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 cursor-pointer hover:shadow-xl transition-all duration-300 text-center group">
+                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition">
+                    <svg xmlns="http://w3.org" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </div>
+                <h4 class="text-2xl font-bold text-slate-800">Depression</h4>
+                <p class="text-blue-500 font-bold mt-4 text-sm uppercase tracking-widest">Open Journal ↓</p>
+            </div>
+            
+
+            <!-- Anxiety Card -->
+            <div onclick="openJournal('anxiety')" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 cursor-pointer hover:shadow-xl transition-all duration-300 text-center group">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition">
+                    <svg xmlns="http://w3.org" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h4 class="text-2xl font-bold text-slate-800">Anxiety</h4>
+                <p class="text-orange-500 font-bold mt-4 text-sm uppercase tracking-widest">Open Journal ↓</p>
+            </div>
+
+            <!-- Recovery Card -->
+            <div onclick="openJournal('recovery')" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 cursor-pointer hover:shadow-xl transition-all duration-300 text-center group">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition">
+                    <svg xmlns="http://w3.org" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <h4 class="text-2xl font-bold text-slate-800">Recovery</h4>
+                <p class="text-green-500 font-bold mt-4 text-sm uppercase tracking-widest">Open Journal ↓</p>
+            </div>
+        </div>
+    </div>
+<div class="mt-8 pt-6 border-t border-gray-100">
+    <h4 class="font-bold text-gray-700 mb-4 flex items-center gap-2">
+        <i class="fa fa-pen-fancy text-sm opacity-50"></i> Write Your Own Entry
+    </h4>
+    
+    <div class="space-y-3">
+        <input type="text" id="userTitle" placeholder="Title of your story..." 
+            class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all">
+        
+        <textarea id="userText" placeholder="How are you feeling today?" 
+            class="w-full p-3 h-28 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all"></textarea>
+        
+        <button onclick="savePersonalEntry()" 
+            class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-black hover:shadow-lg transition-all active:scale-95">
+            Add to My Journal
+        </button>
+    </div>
+</div>
+
+<script>
+function savePersonalEntry() {
+    const title = document.getElementById('userTitle');
+    const text = document.getElementById('userText');
+    const feed = document.querySelector('.space-y-6'); 
+
+    if (!title.value.trim() || !text.value.trim()) {
+        alert("Please write something first.");
+        return;
+    }
+    const entry = document.createElement('div');
+    entry.className = "border-l-4 border-blue-500 pl-5 py-3 bg-blue-50/50 rounded-r-xl animate-fade-in";
+    entry.innerHTML = `
+        <h4 class="font-bold text-gray-900">${title.value}</h4>
+        <p class="text-gray-700 italic mt-1 leading-relaxed">"${text.value}"</p>
+        <div class="mt-2 text-[10px] font-bold text-blue-500 uppercase tracking-widest">Added to your personal log</div>
+    `;
+
+    
+    feed.appendChild(entry);
+
+   
+    title.value = '';
+    text.value = '';
+    
+    
+    entry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+
+</section>
+<div id="zen-modal" class="hidden fixed inset-0 z-[9999] bg-white w-full h-full flex flex-col overflow-y-auto">
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md p-6 border-b flex justify-between items-center px-10">
+        <span class="text-gray-400 font-medium tracking-widest uppercase text-xs">Deep Reading Mode</span>
+        <button onclick="closeJournal()" class="bg-slate-900 text-white px-6 py-2 rounded-full font-bold hover:bg-slate-700 transition">✕ Close</button>
+    </nav>
+
+    <div class="max-w-3xl mx-auto py-20 px-8">
+        <h1 id="zen-title" class="text-5xl font-black mb-12"></h1>
+        <div id="zen-content" class="space-y-12 text-lg text-gray-700 leading-relaxed">
+        </div>
+        <div class="mt-20 pt-10 border-t text-center italic text-gray-400">End of Journal</div>
+    </div>
+</div>
+
+<script>
+const journalData = {
+    'depression': {
+        title: 'Depression Journals',
+        color: 'text-blue-600',
+        stories: [
+            { t: 'The Weight of Silence', p: 'It started with losing interest in my favorite books. Suddenly, the words felt heavy and the stories I loved felt distant. I spent weeks just staring at the ceiling, wondering when the fog would lift, but it only seemed to get thicker. It wasn\'t just sadness; it was an exhausting emptiness.' },
+            { t: 'Shadows in the Sun', p: 'Everyone thought I was okay because I was still laughing at work, but the moment I got into my car, the mask would fall. High-functioning depression is a lonely battle because you feel like a fraud. You\'re performing for the world while your soul is begging for a break.' },
+            { t: 'Winter of the Soul', p: 'Living with depression is like being stuck in a permanent winter. You know the sun exists somewhere, but you can\'t feel its warmth. I started journaling every night, even if I only wrote one word. That one word was proof that I was still here, still fighting.' }
+        ]
+    },
+    'anxiety': {
+        title: 'Anxiety Journals',
+        color: 'text-orange-600',
+        stories: [
+            { t: 'The Constant Alarm', p: 'Imagine an alarm clock going off in your chest 24/7, but you don\'t know how to turn it off. I couldn\'t enjoy a dinner with friends because I was too busy overanalyzing the way I said hello or worrying if I left the stove on at home.' },
+            { t: 'The Overthinker\'s Maze', p: 'Social anxiety feels like being on a stage where you forgot your lines, but everyone else knows them. Every interaction felt like a test I was destined to fail. I would spend hours after a party replaying every conversation in my head.' },
+            { t: 'Breathless Moments', p: 'Panic attacks are terrifying because your body thinks you\'re dying when you\'re just sitting on your couch. Now, when I feel the tightness in my chest, I talk to my anxiety. Learning to breathe through the fear instead of running from it has changed everything.' }
+        ]
+    },
+    'recovery': {
+        title: 'Recovery Journals',
+        color: 'text-green-600',
+        stories: [
+            { t: 'The Art of Mending', p: 'Recovery isn\'t a destination; it\'s a way of traveling. Like a piece of pottery fixed with gold—stronger and more beautiful because I was once broken. Today, I celebrate the days I wake up and actually want to see the sun.' },
+            { t: 'One Step at a Time', p: 'I used to get frustrated when I had a bad day after weeks of being okay. But a bad day isn\'t a bad life, and a relapse in mood isn\'t a failure—it\'s a detour. I\'ve learned to be patient with my heart.' },
+            { t: 'Finding My Voice', p: 'For a long time, mental illness was the only language I spoke. In recovery, I had to rediscover who I was without the labels. I found out I like painting, I like early mornings, and I like helping others who are still in the dark.' }
+        ]
+    }
+};
+
+function openJournal(type) {
+    const data = journalData[type];
+    const modal = document.getElementById('zen-modal');
+    const title = document.getElementById('zen-title');
+    const content = document.getElementById('zen-content');
+
+    title.innerText = data.title;
+    title.className = `text-5xl font-black mb-12 ${data.color}`;
+    
+    content.innerHTML = data.stories.map(s => `
+        <div class="animate-slide-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">${s.t}</h2>
+            <p class="mb-4">${s.p}</p>
+            <p>I learned that healing takes time and it is okay not to be okay every single day. The important thing is we keep moving forward, no matter how small the step.</p>
+        </div>
+    `).join('');
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeJournal() {
+    document.getElementById('zen-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto'; 
+}
+</script>
+
+<style>
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up { animation: slideUp 0.6s ease-out forwards; }
+</style>
+
+
+   <style>
+        .reply-section { display: none; max-height: 400px; overflow-y: auto; }
+        .reply-section.active { display: block; }
+        .reply-section::-webkit-scrollbar { width: 5px; }
+        .reply-section::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <section id="community" class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-slate-800 mb-2">Community Talk</h3>
+                <p class="text-gray-500">Click a card to see all 20+ replies</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4" id="post-container">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const discussions = [
+            {
+                id: 1,
+                title: "How do you deal with panic attacks?",
+                author: "Anonymous",
+                replies: [
+                    "Deep breathing is key.", "Try the 5-4-3-2-1 method.", "Holding an ice cube helps me ground.",
+                    "I call a friend immediately.", "Focusing on a single sound helps.", "Lavender oil helps me relax.",
+                    "I step outside for fresh air.", "Don't fight it, let it pass.", "I repeat positive affirmations.",
+                    "Drinking cold water helps.", "I try to count backwards from 100.", "Splashing cold water on my face.",
+                    "I find a quiet space.", "Weighted blankets are life savers.", "Listening to white noise.",
+                    "I focus on my heartbeat.", "Gentle stretching helps.", "Avoiding caffeine made a difference.",
+                    "I write down what I feel.", "Remembering that it's temporary."
+                ]
+            },
+            {
+                id: 2,
+                title: "Feeling lonely even when surrounded by people",
+                author: "User123",
+                replies: [
+                    "It's called emotional loneliness.", "Quality over quantity of friends.", "I feel this way too sometimes.",
+                    "Maybe try a new hobby?", "Journaling helps process these feelings.", "You're not alone in this.",
+                    "Social media makes it worse for me.", "Try talking to one person deeply.", "It's okay to feel this way.",
+                    "Maybe you need some 'me time'?", "Join a local club or group.", "Volunteering helped me connect.",
+                    "Reach out to an old friend.", "Music is my best companion.", "Pets can really help with loneliness.",
+                    "Focus on self-love first.", "Deep conversations are better than small talk.", "I started gardening, it helps.",
+                    "Try to be present in the moment.", "Sending virtual hugs to you!"
+                ]
+            },
+            {
+                id: 3,
+                title: "Tips to stay motivated as a student",
+                author: "StudentLife",
+                replies: [
+                    "Pomodoro technique (25/5).", "Set small, achievable goals.", "Reward yourself after studying.",
+                    "Keep your workspace clean.", "Avoid studying on your bed.", "Use colorful pens for notes.",
+                    "Listen to lo-fi beats.", "Turn off your phone notifications.", "Study with a dedicated partner.",
+                    "Take short walks in between.", "Stay hydrated!", "Plan your day the night before.",
+                    "Don't forget to sleep enough.", "Remind yourself why you started.", "Break big tasks into tiny steps.",
+                    "Find a 'study-gram' for inspo.", "Teach the topic to someone else.", "Use flashcards like Anki.",
+                    "Consistency is better than intensity.", "Believe in yourself, you got this!"
+                ]
+            }
+        ];
+
+        const container = document.getElementById('post-container');
+
+    
+        discussions.forEach(post => {
+            const postHTML = `
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="p-5 cursor-pointer hover:bg-gray-50 transition flex justify-between items-center" onclick="toggleReplies(${post.id})">
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">${post.title}</h4>
+                            <p class="text-sm text-gray-500">Posted by: ${post.author} • <span class="text-blue-500 font-medium">${post.replies.length} Replies</span></p>
+                        </div>
+                        <span class="text-gray-400 text-xl" id="icon-${post.id}">+</span>
+                    </div>
+                    
+                    <div id="replies-${post.id}" class="reply-section bg-gray-50 border-t border-gray-100 p-5">
+                        <div class="space-y-4 mb-6">
+                            ${post.replies.map((r, index) => `
+                                <div class="flex gap-3 animate-fade-in">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-600">
+                                        U${index + 1}
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg shadow-sm flex-1">
+                                        <p class="text-sm text-gray-700">${r}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="flex gap-2 sticky bottom-0 bg-gray-50 pt-2 border-t">
+                            <input type="text" placeholder="Write a reply..." class="w-full p-2 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            <button class="bg-blue-600 text-white px-4 py-1 rounded-lg text-sm hover:bg-blue-700">Send</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += postHTML;
+        });
+
+        function toggleReplies(id) {
+            const section = document.getElementById(`replies-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+
+            document.querySelectorAll('.reply-section').forEach(el => {
+                if (el.id !== `replies-${id}`) el.classList.remove('active');
+            });
+
+            section.classList.toggle('active');
+            icon.innerText = section.classList.contains('active') ? '−' : '+';
+        }
+    </script>
+    <!-- ASK A QUESTION FORM -->
+<div class="max-w-3xl mx-auto mb-10 bg-white p-6 rounded-2xl shadow-md border border-blue-50">
+    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+        <span class="bg-blue-100 p-2 rounded-lg text-blue-600">💬</span> 
+        What's on your mind?
+    </h4>
+    <div class="space-y-4">
+        <input type="text" id="new-question-title" placeholder="Type your question or topic here..." 
+               class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-50 transition">
+        
+        <div class="flex justify-between items-center">
+            <p class="text-xs text-gray-400">Your post will be visible to the community.</p>
+            <button onclick="addNewPost()" class="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">
+                Post Question
+            </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ART GALLERY SECTION -->
+<section id="gallery" class="py-16 px-4 bg-white">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-4xl font-bold text-slate-800 mb-2">Art & Expression</h3>
+            <p class="text-gray-500">Sometimes art explains what words cannot</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            
+            <script>
+                const artData = [
+                    { id: 1, name: "Colorful Explosion", price: 120, img: "1777524364854.jpeg", desc: "A vibrant explosion of colors." },
+                    { id: 2, name: "Inner Peace", price: 95, img: "1777524342411.jpeg", desc: "Silence amidst the loud world." },
+                    { id: 3, name: "The Void", price: 150, img: "1777524336357.jpeg", desc: "Understanding the empty spaces." },
+                    { id: 4, name: "Deep Focus", price: 85, img: "1777524327369.jpeg", desc: "Concentrating on what matters." },
+                    { id: 5, name: "The Creative Mind", price: 200, img: "1777524318813.jpeg", desc: "Ideas waiting to explode." },
+                    { id: 6, name: "Growth", price: 110, img: "1777524315555.jpeg", desc: "Changing for the better." },
+                    { id: 7, name: "Hidden Layers", price: 130, img: "1777524289243.jpeg", desc: "More than what meets the eye." },
+                    { id: 8, name: "Reflection", price: 90, img: "1777524285700.jpeg", desc: "Looking back to move forward." },
+                    { id: 9, name: "Simple Joy", price: 75, img: "1777524279598.jpeg", desc: "Finding light in small things." },
+                    { id: 10, name: "Boundaries", price: 140, img: "1777524275309.jpeg", desc: "Protecting your energy." },
+                    { id: 11, name: "Courage", price: 160, img: "1777524258945.jpeg", desc: "Facing the dark bravely." },
+                    { id: 12, name: "Stories", price: 105, img: "1777524234888.jpeg", desc: "Every soul has a tale." },
+                    { id: 13, name: "Connection", price: 125, img: "1777524230415.jpeg", desc: "We are all linked somehow." },
+                    { id: 14, name: "Solitude", price: 95, img: "1777525538305.jpeg", desc: "Alone but not lonely." },
+                ];
+
+                document.write(artData.map(art => `
+                    <div class="group border p-4 rounded-xl hover:shadow-lg transition">
+                        <div class="rounded-xl overflow-hidden h-40 bg-gray-100">
+                            <img src="c:\\Users\\Administrator\\Desktop\\${art.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h5 class="font-bold text-slate-700 text-sm">${art.name}</h5>
+                            <p class="text-blue-600 font-bold">$${art.price.toFixed(2)}</p>
+                            <button onclick="addToCart('${art.name}', ${art.price})" class="mt-2 bg-slate-800 text-white text-xs px-3 py-2 rounded-lg hover:bg-blue-600">Add to Cart</button>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+
+        </div>
+<div class="group cursor-pointer" onclick="document.getElementById('art-upload').click()">
+    <div class="rounded-xl border-2 border-dashed border-blue-200 h-48 flex flex-col items-center justify-center bg-blue-50 group-hover:bg-blue-100 group-hover:border-blue-400 transition duration-300">
+        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm mb-2 group-hover:scale-110 transition">
+            <span class="text-blue-600 text-2xl font-bold">+</span>
+        </div>
+        <p class="text-sm font-bold text-blue-700">Share Your Art</p>
+        <p class="text-[10px] text-blue-500 uppercase tracking-wider">Click to upload</p>
+    </div>
+    <input type="file" id="art-upload" class="hidden" accept="image/*" onchange="previewArt(event)">
+</div>
+
+        </div>
+    </div>
+</section>
+       
+         <section style="margin-bottom: 20px;">
+</section>
+
+        <div id="printableTicket" class="mt-16 max-w-md mx-auto bg-slate-50 p-8 rounded-2xl border-2 border-dashed border-slate-400">
+            <div class="text-center border-b border-slate-300 pb-4 mb-4">
+                <h4 class="text-2xl font-black uppercase tracking-widest text-slate-800">Gallery Ticket</h4>
+                <p class="text-xs text-gray-500">Official Receipt of Selection</p>
+            </div>
+            
+            <div id="cart-items" class="text-sm text-gray-700 space-y-3 mb-6">
+                <p class="italic text-gray-400 text-center">Your basket is empty</p>
+            </div>
+            
+            <div class="border-t-2 border-slate-800 pt-4 flex justify-between items-center">
+                <span class="text-lg font-bold">TOTAL AMOUNT:</span>
+                <span id="total-price" class="text-2xl font-black text-blue-600">$0.00</span>
+            </div>
+
+            <div class="mt-8 flex gap-2">
+                <button onclick="window.print()" class="flex-1 bg-slate-800 text-white font-bold py-3 rounded-xl hover:bg-slate-900 transition">
+                    Print Ticket 🖨️
+                </button>
+                <button onclick="resetCart()" class="bg-gray-200 text-gray-600 px-4 py-3 rounded-xl hover:bg-red-100">Reset</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let total = 0;
+    let items = [];
+
+    function addToCart(name, price) {
+        total += price;
+        items.push({name, price});
+        updateDisplay();
+    }
+
+    function resetCart() {
+        total = 0;
+        items = [];
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        const cartDiv = document.getElementById('cart-items');
+        const totalSpan = document.getElementById('total-price');
+        
+        if(items.length === 0) {
+            cartDiv.innerHTML = '<p class="italic text-gray-400 text-center">Your basket is empty</p>';
+        } else {
+            cartDiv.innerHTML = items.map(item => `
+                <div class="flex justify-between border-b border-slate-200 border-dotted pb-1">
+                    <span>${item.name}</span>
+                    <span class="font-mono">$${item.price.toFixed(2)}</span>
+                </div>
+            `).join('');
+        }
+        
+        totalSpan.innerText = `$${total.toFixed(2)}`;
+    }
+</script>
+
+<style>
+    @media print {
+        body * { visibility: hidden; }
+        #printableTicket, #printableTicket * { visibility: visible; }
+        #printableTicket { position: absolute; left: 0; top: 0; width: 100%; border: none; }
+        button { display: none; }
+    }
+</style>
+<section style="margin-bottom: 20px;">
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archive | Creator's Hub</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background: #ffffff; }
+
+        /* --- SMART NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(15, 15, 15, 0.98); backdrop-filter: blur(12px);
+            height: 60px; display: flex; align-items: center; justify-content: space-around;
+            z-index: 10000; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+        }
+        .nav-hidden { transform: translateY(-100%); }
+
+        .ticket-btn {
+            background: #ffc107; color: #000; padding: 5px 15px;
+            border-radius: 4px; font-weight: bold; font-size: 0.75rem;
+            border: 1.5px dashed #000; text-transform: uppercase; cursor: pointer;
+            transition: 0.3s;
+        }
+        .ticket-btn:hover { background: #fff; transform: scale(1.1); box-shadow: 0 0 15px rgba(255, 193, 7, 0.5); }
+        .hero-section {
+            height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            text-align: center; background: radial-gradient(circle, #ffffff 0%, #cfd9df 100%);
+            padding: 0 20px; box-sizing: border-box; animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hero-section h1 { font-size: 5rem; color: #111; margin: 0; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -2px; }
+        .hero-section p { font-size: 1.8rem; color: #333; max-width: 850px; margin: 25px auto 0; line-height: 1.4; font-weight: 300; }
+
+        .highlight-text {
+            color: #d63031; font-weight: 800; display: block; margin: 40px auto;
+            font-size: 1.3rem; text-transform: uppercase; letter-spacing: 5px;
+            border-bottom: 2px solid #d63031; display: inline-block; padding-bottom: 8px;
+            cursor: pointer; transition: 0.4s;
+        }
+
+        .modal {
+            display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100vh;
+            background: rgba(0,0,0,0.95); backdrop-filter: blur(20px); z-index: 10001; overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a); 
+            margin: 50px auto; padding: 60px 40px;
+            width: 90%; max-width: 500px; 
+            border-radius: 40px; 
+            border: 1px solid rgba(255, 193, 7, 0.4); 
+            transform: scale(0.85); opacity: 0; transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center; 
+            box-shadow: 0 0 50px rgba(255, 193, 7, 0.15); 
+            color: #ffffff;
+        }
+        .modal.active .modal-content { transform: scale(1); opacity: 1; }
+
+        .info-grid h3 { 
+            color: #ffc107; 
+            font-size: 0.75rem; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        
+        .info-grid p { 
+            margin: 0 0 35px 0; 
+            font-size: 1.15rem; 
+            font-weight: 300; 
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+        .divider {
+            height: 1px;
+            width: 40px;
+            background: rgba(255, 193, 7, 0.3);
+            margin: 0 auto 25px;
+        }
+
+        .close-btn { 
+            position: absolute; right: 30px; top: 25px; 
+            font-size: 35px; cursor: pointer; color: #ffc107; 
+            transition: 0.3s; 
+        }
+        .close-btn:hover { color: #fff; transform: rotate(90deg); }
+
+        .protocol-label {
+            font-weight: 800;
+            color: #ffc107;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="mainNav">
+        <div style="color: #fff; font-size: 0.9rem; font-weight: bold; letter-spacing: 2px;">THE ARCHIVE</div>
+        <div id="ticketBtn" class="ticket-btn">🎟️ CREATOR PASS</div>
+    </nav>
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <h1>Welcome to My Space</h1>
+        <p class="center-text">
+           A digital grave for my loudest demons. This is where art meets the part of me that refuses to die. 
+            <br> Every shadow here was dragged out from a war you never saw.
+        </p>
+        
+        <div class="story-teaser">
+            <span class="highlight-text" id="teaserTrigger">Click to bleed with The Creator..</span>
+        </div>
+    </div>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content" style="font-family: sans-serif; line-height: 1.6;">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        
+        <div class="info-grid" style="text-align: justify; text-justify: inter-word;">
+            <h3>Identity</h3>
+            <p style="color: #ffc107; font-weight: 800; letter-spacing: 2px; font-size: 1.5rem;">CHERRY</p>
+            <div class="divider"></div>
+
+            <h3>Age Status</h3>
+            <p>19 Years of Survival</p>
+            <div class="divider"></div>
+
+            <h3>The Manifesto</h3>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                I built this Mind Haven to share comfort and peace. Having gone through my own challenges, I wanted to create a space where everyone can find rest, relief, and healing for their mind and soul.
+            </p>
+            <div class="divider"></div>
+
+            <h3>Mental Experience</h3>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                Ever since in high school, I felt like I was living in total darkness. I was trapped alone in an empty house while my parents were working, my sisters were far away studying, and silence was the only thing keeping me company. Every night felt endless, and the loneliness slowly ate me alive until anxiety and depression took full control.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                When the pandemic came, my mind became a living nightmare. I was drowning in fear and pain, but I couldn't scream for help because I was terrified of being judged. I kept every terrifying thought locked inside my head, and the more I stayed silent, the louder the chaos became. It felt like I was being consumed by something I couldn't see or fight.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                By Grade 9, I completely lost myself. I stopped caring about my studies and buried myself in my phone just to escape reality. When the first quarter results came and my name wasn't on the honor list, I tried to convince myself it was nothing. I made it back on the list for the second quarter, but the darkness pulled me back down again. Every time I tried to focus, panic would attack me like a wild beast, crushing me with pressure until I couldn't breathe. I chose to run away instead of facing the pain.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                Then came the day that changed everything. Our teacher posted the list of students who would graduate with honors. I stared at the screen, trembling, searching for my name... but it wasn't there. My heart stopped. I messaged my teacher, begging it was just a mistake, but her reply crushed me: "89."
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                Fear paralyzed me. I wasn't scared for myself, but I was terrified of my parents. I had always been the honor student, and I knew their expectations were high. I couldn't face them. I couldn't handle the disappointment. The weight was too heavy to carry.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                In that moment of total despair, the voices in my head screamed louder than ever. I felt like death was the only way out. I walked towards the cabinet with shaking hands, my heart pounding like a drum. I opened the bottles of medicine, one by one, and poured them into my palm. It looked like a handful of white death.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                Without hesitation, I swallowed them all. Pill after pill after pill. I could feel my throat burning, my vision starting to blur, and my body getting heavy. I laid down, waiting for the end. The room started to spin, the silence became deafening, and slowly, everything turned pitch black. I could feel my soul slipping away, leaving my body behind. I was ready to never wake up again.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                When I opened my eyes again, the bright white lights of the hospital stabbed my eyes. I was alive, but I felt empty inside. They asked me why I did it, but I couldn't speak—I was still trapped in fear, still seeing the darkness I came back from. The next day, I finally found the courage to tell them the truth. I told them about the anxiety, the pressure, and the terror I felt inside.
+            </p>
+            <p style="font-weight: bold; margin-top: 15px; margin-bottom: 15px;">To be continued... 🕯️👁️</p>
+            <div class="divider"></div>
+
+            <h3>Action Protocol</h3>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                Healing was not an overnight journey, but I slowly learned how to take back control of my life. I realized that I couldn't keep running away from my feelings, so I started facing them gently.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                I learned to validate myself. Instead of telling myself that my feelings were wrong or that I was weak, I started saying, "It is okay to feel this way, but I am stronger than this." I stopped seeking validation from others and started listening to what my mind and heart truly needed.
+            </p>
+            <p style="text-indent: 50px; margin-bottom: 15px;">
+                I also discovered that distraction is different from healing. While using my phone helped me forget for a while, true peace came when I learned to sit with my emotions, breathe, and understand where they were coming from. I started accepting that my worth is not defined by my grades or by what others expect of me.
+            </p>
+            
+            <h4 style="margin-top: 25px; margin-bottom: 15px; color: #ffc107;">What I Do When It Attacks</h4>
+            
+            <div style="margin-bottom: 15px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">1. I Stop and Breathe</p>
+                <p style="text-indent: 30px; margin-top: 0;">When my mind starts to race and I feel overwhelmed, I pause everything. I take deep, slow breaths. I remind myself: "This feeling is temporary. It will pass, just like all the other times."</p>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">2. I Talk to Myself Softly</p>
+                <p style="text-indent: 30px; margin-top: 0;">Instead of scolding myself or panicking, I speak gently. I say, "You are safe. You are not alone. You have survived this before, and you will survive it now."</p>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">3. I Write It Down</p>
+                <p style="text-indent: 30px; margin-top: 0;">I pour all the chaos in my head onto paper or into my notes. Seeing my thoughts written down makes them feel smaller and more manageable. It helps me realize that they are just thoughts, not facts.</p>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">4. I Do Something I Love</p>
+                <p style="text-indent: 30px; margin-top: 0;">I shift my focus to things that bring me peace—whether it’s listening to calming music, watching something funny, or simply resting. I give myself permission to pause and take care of myself.</p>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">5. I Remember My Why</p>
+                <p style="text-indent: 30px; margin-top: 0;">I remember that I survived the darkest days, and I created this space to help others. That purpose gives me strength to keep going and not let the darkness win.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        let lastScrollTop = 0;
+        const nav = document.getElementById("mainNav");
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 50) { nav.classList.add("nav-hidden"); }
+            else { nav.classList.remove("nav-hidden"); }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+
+        const modal = document.getElementById("infoModal");
+        const ticketBtn = document.getElementById("ticketBtn");
+        const teaserTrigger = document.getElementById("teaserTrigger");
+        const closeBtn = document.getElementById("closeBtn");
+
+        const openModal = () => {
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+            setTimeout(() => { modal.classList.add("active"); }, 10);
+        };
+
+        ticketBtn.onclick = openModal;
+        teaserTrigger.onclick = openModal;
+
+        closeBtn.onclick = () => {
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+            setTimeout(() => { modal.style.display = "none"; }, 400);
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) { closeBtn.onclick(); }
+        }
+    </script>
+</body>
+</html>
+
+   <!-- RESOURCES SECTION -->
+<section id="resources" class="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Support Hub</span>
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Help & Resources</h3>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+                "You don't have to carry it all by yourself. Explore our curated tools to help you navigate through tough times."
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Card 1: Hotlines -->
+            <div class="group bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                    <i class="fa fa-phone text-2xl text-blue-600 group-hover:text-white"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-3">Crisis Hotlines</h4>
+                <p class="text-gray-600 mb-6 italic">Immediate support for when you need someone to talk to right now.</p>
+                <button onclick="toggleModal('modal-hotlines')" class="text-blue-600 font-bold hover:text-blue-800 transition-colors">View Numbers →</button>
+            </div>
+
+            <!-- Card 2: Self-Help -->
+            <div class="group bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                    <i class="fa fa-book-open text-2xl text-green-600 group-hover:text-white"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-3">Self-Help Guides</h4>
+                <p class="text-gray-600 mb-6 italic">Practical tips and breathing exercises to manage stress and anxiety.</p>
+                <button onclick="toggleModal('modal-guides')" class="text-green-600 font-bold hover:text-green-800 transition-colors">Read Guides →</button>
+            </div>
+
+            <!-- Card 3: Playlist -->
+            <div class="group bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300">
+                    <i class="fa fa-headphones text-2xl text-purple-600 group-hover:text-white"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-3">Mental Wellness</h4>
+                <p class="text-gray-600 mb-6 italic">Curated sounds and music designed to calm the mind and body.</p>
+                <button onclick="toggleModal('modal-playlist')" class="text-purple-600 font-bold hover:text-purple-800 transition-colors">Listen Now →</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODALS -->
+
+<!-- Modal: Hotlines -->
+<div id="modal-hotlines" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-8 relative">
+        <button onclick="toggleModal('modal-hotlines')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+        <h3 class="text-2xl font-bold mb-4">Emergency Hotlines</h3>
+        <ul class="space-y-4">
+            <li class="border-b pb-2"><strong>National Mental Health:</strong> <br> <span class="text-blue-600">1553 (Luzon-wide toll-free)</span></li>
+            <li class="border-b pb-2"><strong>Hopeline PH:</strong> <br> <span class="text-blue-600">0917-558-4673</span></li>
+            <li><strong>In Touch Community:</strong> <br> <span class="text-blue-600">8893-7603</span></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal: Guides -->
+<div id="modal-guides" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-8 relative">
+        <button onclick="toggleModal('modal-guides')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+        <h3 class="text-2xl font-bold mb-4">Quick Self-Help Tips</h3>
+        <ul class="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong>4-7-8 Breathing:</strong> Inhale for 4s, hold for 7s, exhale for 8s.</li>
+            <li><strong>5-4-3-2-1 Technique:</strong> Acknowledge 5 things you see, 4 you can touch, 3 you hear...</li>
+            <li><strong>Digital Detox:</strong> Put away your phone for at least 30 mins before sleep.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal: Playlist -->
+<div id="modal-playlist" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-8 relative">
+        <button onclick="toggleModal('modal-playlist')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+        <h3 class="text-2xl font-bold mb-4">Calming Audio</h3>
+        <div class="space-y-4">
+            <p class="text-gray-600">Try these sounds to relax:</p>
+            <div class="p-3 bg-gray-100 rounded-lg flex justify-between items-center">
+                <span>Rain & Thunder</span>
+                <i class="fa fa-play-circle text-purple-600 cursor-pointer text-xl"></i>
+            </div>
+            <div class="p-3 bg-gray-100 rounded-lg flex justify-between items-center">
+                <span>Lo-fi Study Beats</span>
+                <i class="fa fa-play-circle text-purple-600 cursor-pointer text-xl"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.toggle('hidden');
+}
+</script>
+
+<footer class="bg-slate-900 text-gray-300 pt-16 pb-8 px-4">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+            <div class="space-y-6">
+                <div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <a href="#home" class="transition transform hover:scale-105 block" title="Back to top">
+                            <img src="c:\Users\Administrator\Desktop\IMG_20260502_111507.png" alt="Mind Haven Logo" class="w-14 h-14 object-contain rounded-lg shadow-lg">
+                        </a>
+                        <h4 class="text-white text-xl font-bold italic">Mind Haven</h4>
+                    </div>
+                    <p class="text-xs leading-relaxed text-gray-400">
+                        A safe digital sanctuary designed for expression, healing, and community support. You are never alone in your journey.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Support</h4>
+                    <ul class="space-y-1 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                        <li class="pt-1">
+                            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition break-all" title="Compose Gmail">
+                                bendanillorubilyn@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Navigation</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#breathe" class="hover:text-white transition">Breathe</a></li>
+                    <li><a href="#affirmations" class="hover:text-white transition">Affirmations</a></li>
+                    <li><a href="#selfcare" class="hover:text-white transition">Self Care</a></li>
+                    <li><a href="#music" class="hover:text-white transition">Music</a></li>
+                    <li><a href="#stories" class="hover:text-white transition">Stories</a></li>
+                    <li><a href="#community" class="hover:text-white transition">Community</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition">Art & Gallery</a></li>
+                    <li><a href="#resources" class="hover:text-white transition">Resources</a></li>
+                </ul>
+            </div>
+
+            <!-- Crisis Hotlines Column -->
+            <div>
+                <h4 class="text-blue-400 font-bold mb-4 uppercase text-xs tracking-widest">Crisis Hotlines</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="border-b border-gray-800 pb-2">
+                        <span class="text-gray-400 font-semibold block mb-0.5">National Mental Health</span>
+                        <a href="tel:1553" class="text-blue-400 hover:underline">1553 (Toll-Free)</a>
+                    </li>
+                    <li class="border-b border-gray-800 pb-2">
+                        <span class="text-gray-400 font-semibold block mb-0.5">Hopeline PH</span>
+                        <a href="tel:09175584673" class="text-blue-400 hover:underline">0917-558-4673</a>
+                    </li>
+                    <li>
+                        <span class="text-gray-400 font-semibold block mb-0.5">In Touch Community</span>
+                        <a href="tel:88937603" class="text-blue-400 hover:underline">8893-7603</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Self-Help Guides Column -->
+            <div>
+                <h4 class="text-green-400 font-bold mb-4 uppercase text-xs tracking-widest">Self-Help Tips</h4>
+                <ul class="space-y-3 text-xs text-gray-400">
+                    <li class="border-b border-gray-800 pb-2">
+                        <strong class="text-white block mb-0.5">4-7-8 Breathing</strong>
+                        Inhale 4s, hold 7s, exhale 8s.
+                    </li>
+                    <li class="border-b border-gray-800 pb-2">
+                        <strong class="text-white block mb-0.5">5-4-3-2-1 Grounding</strong>
+                        Notice 5 sights, 4 touches...
+                    </li>
+                    <li>
+                        <strong class="text-white block mb-0.5">Digital Detox</strong>
+                        No phone 30 mins before sleep.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Calming Audio & Social Column -->
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-purple-400 font-bold mb-4 uppercase text-xs tracking-widest">Calming Audio</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex justify-between items-center bg-slate-800/40 p-2 rounded border border-slate-800">
+                            <span class="text-gray-300">Rain & Thunder</span>
+                            <button onclick="toggleModal('modal-playlist')" class="text-purple-400 hover:text-purple-300">
+                                <i class="fa fa-play-circle text-sm"></i>
+                            </button>
+                        </li>
+                        <li class="flex justify-between items-center bg-slate-800/40 p-2 rounded border border-slate-800">
+                            <span class="text-gray-300">Lo-fi Study Beats</span>
+                            <button onclick="toggleModal('modal-playlist')" class="text-purple-400 hover:text-purple-300">
+                                <i class="fa fa-play-circle text-sm"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Stay Connected</h4>
+                    <div class="flex space-x-4 text-lg">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+            <p>© 2026 Mind Haven. You are loved, you are valid. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
